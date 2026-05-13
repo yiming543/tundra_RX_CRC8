@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="D:\yiming\00work\tundar_RX_CRC8_V01.X\out\TY1475_HIGH_R_V03\default.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>8192</length>
+      <used>1003</used>
+      <free>7189</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>512</length>
+      <used>119</used>
+      <free>393</free>
+    </memory>
+  </executable>
+</project>
