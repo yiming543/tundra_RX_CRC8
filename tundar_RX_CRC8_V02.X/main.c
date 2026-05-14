@@ -28,6 +28,9 @@
 
 //20260514 tundra_crc8_V02 CS:F675
 //將ECCP3_CallBack函式，獨立成receiver_PWM.c，並重構。
+//以低電壓寬位判斷bit1.bit0
+//bit0 lo 14us/38us
+//bit1 lo 28us/24us
 
 #include "mcc_generated_files/mcc.h"
 #include "DATA_define.h"
