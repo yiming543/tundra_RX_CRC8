@@ -1,0 +1,25 @@
+# ninja log v7
+60	2443	8002678168513260	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/device_config.c.p1	f68e8ac077c968f0
+93	2617	8002678168837903	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/eccp3.c.p1	4c713d42196243ab
+130	1807	8002698885309346	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/pin_manager.c.p1	8e1ad6eb5e0996d1
+54	1874	8002698884564299	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/interrupt_manager.c.p1	c64beb8d230dff72
+14	2976	8002678168059396	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/main.c.p1	1e29766e2462a1ff
+90	1855	8002698884915836	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/mcc.c.p1	85553efc686eaf
+316	3086	8002678171080571	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/tundra_crc8.c.p1	1e17de9bf806715c
+260	3254	8002678170509376	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/tmr1.c.p1	3bf4ff792751960
+221	3285	8002678170122431	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/tmr0.c.p1	c89549d4cc0240e4
+3285	8293	8002678200795943	D:/yiming/00work/tundar_RX_CRC8_V01.X/out/TY1475_HIGH_R_V03/default.elf	327fcc886e22f720
+102	2860	8004239951279729	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/device_config.c.p1	f68e8ac077c968f0
+363	2943	8004239953883837	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/tundra_crc8.c.p1	1e17de9bf806715c
+126	3118	8004239951516208	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/eccp3.c.p1	4c713d42196243ab
+23	3122	8004239950492781	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/Receiver_PWM.c.p1	e404ca95d0be5efc
+250	3129	8004239952835745	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/tmr0.c.p1	c89549d4cc0240e4
+208	3146	8004239952338223	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/pin_manager.c.p1	8e1ad6eb5e0996d1
+176	3164	8004239952006296	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/mcc.c.p1	85553efc686eaf
+149	3169	8004239951746239	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/interrupt_manager.c.p1	c64beb8d230dff72
+321	3179	8004239953457323	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/mcc_generated_files/tmr1.c.p1	3bf4ff792751960
+8	1517	8004241191090068	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/Receiver_PWM.c.p1	e404ca95d0be5efc
+7	1529	8004241420051302	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/main.c.p1	1e29766e2462a1ff
+1532	4955	8004241435297668	D:/yiming/00work/tundar_RX_CRC8_V01.X/out/TY1475_HIGH_R_V03/default.elf	5610c3cac0859438
+8	1505	8004243062718028	CMakeFiles/TY1475_HIGH_R_V03_default_default_XC8_compile.dir/D_/yiming/00work/tundar_RX_CRC8_V01.X/Receiver_PWM.c.p1	e404ca95d0be5efc
+1509	4984	8004243077735606	D:/yiming/00work/tundar_RX_CRC8_V01.X/out/TY1475_HIGH_R_V03/default.elf	5610c3cac0859438
