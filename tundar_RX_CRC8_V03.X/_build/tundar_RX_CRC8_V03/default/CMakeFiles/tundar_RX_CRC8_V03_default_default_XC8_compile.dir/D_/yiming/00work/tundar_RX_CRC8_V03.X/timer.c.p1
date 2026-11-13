@@ -1,0 +1,40 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"9 D:\yiming\00work\tundar_RX_CRC8_V03.X\timer.c
+[; ;D:\yiming\00work\tundar_RX_CRC8_V03.X\timer.c: 9: volatile uint8_t fSignalFail = 0U;
+[v _fSignalFail `Vuc ~T0 @X0 1 e ]
+[i _fSignalFail
+-> -> 0 `ui `uc
+]
+"10
+[; ;D:\yiming\00work\tundar_RX_CRC8_V03.X\timer.c: 10: volatile uint16_t T10MS_CNT = 0;
+[v _T10MS_CNT `Vus ~T0 @X0 1 e ]
+[i _T10MS_CNT
+-> -> 0 `i `us
+]
+"12
+[; ;D:\yiming\00work\tundar_RX_CRC8_V03.X\timer.c: 12: void TMR0_EvenHandler(void) {
+[v _TMR0_EvenHandler `(v ~T0 @X0 1 ef ]
+{
+[e :U _TMR0_EvenHandler ]
+[f ]
+"13
+[; ;D:\yiming\00work\tundar_RX_CRC8_V03.X\timer.c: 13:   T10MS_CNT++;
+[e ++ _T10MS_CNT -> -> 1 `i `Vus ]
+"14
+[; ;D:\yiming\00work\tundar_RX_CRC8_V03.X\timer.c: 14:   if (T10MS_CNT >= 200U) {
+[e $ ! >= -> _T10MS_CNT `ui -> 200 `ui 2  ]
+{
+"15
+[; ;D:\yiming\00work\tundar_RX_CRC8_V03.X\timer.c: 15:     T10MS_CNT = 0U;
+[e = _T10MS_CNT -> -> 0 `ui `us ]
+"16
+[; ;D:\yiming\00work\tundar_RX_CRC8_V03.X\timer.c: 16:     fSignalFail = 1U;
+[e = _fSignalFail -> -> 1 `ui `uc ]
+"17
+[; ;D:\yiming\00work\tundar_RX_CRC8_V03.X\timer.c: 17:   }
+}
+[e :U 2 ]
+"18
+[; ;D:\yiming\00work\tundar_RX_CRC8_V03.X\timer.c: 18: }
+[e :UE 1 ]
+}
