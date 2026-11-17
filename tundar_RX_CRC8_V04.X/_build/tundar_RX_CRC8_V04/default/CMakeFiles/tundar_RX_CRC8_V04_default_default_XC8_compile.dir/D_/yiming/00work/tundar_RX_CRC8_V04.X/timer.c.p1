@@ -1,0 +1,159 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F39 `(v ~T0 @X0 0 tf1`uc ]
+[v F38 `*F39 ~T0 @X0 1 t ]
+"15 D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../timer.h
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../timer.h: 15: typedef struct {
+[s S1 `C*F39 1 ]
+[n S1 . set ]
+[v F45 `(v ~T0 @X0 0 tf1`us ]
+[v F44 `*F45 ~T0 @X0 1 t ]
+"19
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../timer.h: 19: typedef struct {
+[s S2 `C*F45 1 ]
+[n S2 . set ]
+"23
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../timer.h: 23: typedef struct{
+[s S3 `S1 1 `S2 1 ]
+[n S3 . fSIGNAL_FAIL t10MS_CNT ]
+[v F58 `(v ~T0 @X0 0 tf ]
+[v F57 `*F58 ~T0 @X0 1 t ]
+[v F61 `(v ~T0 @X0 0 tf ]
+[v F60 `*F61 ~T0 @X0 1 t ]
+[v F64 `(uc ~T0 @X0 0 tf ]
+[v F63 `*F64 ~T0 @X0 1 t ]
+"12 D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../LED.h
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../LED.h: 12: typedef struct {
+[s S4 `C*F58 1 `C*F61 1 `C*F64 1 ]
+[n S4 . on off is_on ]
+"30
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../LED.h: 30: extern const LED_t led[LED_COUNT];
+[v _led `CS4 ~T0 @X0 -> 0 `x e ]
+"41 D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 41:     led[POS].on();
+[c E66 0 1 2 3 4 5 6 .. ]
+[n E66 . POS DRL LO_BEAM HI_BEAM TURN_LEFT TURN_RIGHT LED_COUNT  ]
+"11 D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 11: static uint8_t fSignalFail = 0U;
+[v _fSignalFail `uc ~T0 @X0 1 s ]
+[i _fSignalFail
+-> -> 0 `ui `uc
+]
+"12
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 12: static uint16_t T10MS_CNT = 0;
+[v _T10MS_CNT `us ~T0 @X0 1 s ]
+[i _T10MS_CNT
+-> -> 0 `i `us
+]
+"15
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 15: static void fSIGNAL_FAIL_SET(uint8_t data) {
+[v _fSIGNAL_FAIL_SET `(v ~T0 @X0 1 sf1`uc ]
+{
+[e :U _fSIGNAL_FAIL_SET ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+"16
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 16:   fSignalFail = data;
+[e = _fSignalFail _data ]
+"17
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 17: }
+[e :UE 5 ]
+}
+"19
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 19: static void T10MS_CNT_SET(uint16_t data) {
+[v _T10MS_CNT_SET `(v ~T0 @X0 1 sf1`us ]
+{
+[e :U _T10MS_CNT_SET ]
+[v _data `us ~T0 @X0 1 r1 ]
+[f ]
+"20
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 20:   T10MS_CNT = data;
+[e = _T10MS_CNT _data ]
+"21
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 21: }
+[e :UE 6 ]
+}
+"24
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 24: TMR0_t const tmr0 = {
+[v _tmr0 `CS3 ~T0 @X0 1 e ]
+[i _tmr0
+:U ..
+:U ..
+:U ..
+:U ..
+&U _fSIGNAL_FAIL_SET
+..
+..
+:U ..
+:U ..
+&U _T10MS_CNT_SET
+..
+..
+..
+..
+]
+"29
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 29: void TMR0_EvenHandler(void) {
+[v _TMR0_EvenHandler `(v ~T0 @X0 1 ef ]
+{
+[e :U _TMR0_EvenHandler ]
+[f ]
+"30
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 30:   T10MS_CNT++;
+[e ++ _T10MS_CNT -> -> 1 `i `us ]
+"31
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 31:   if (T10MS_CNT >= 200U) {
+[e $ ! >= -> _T10MS_CNT `ui -> 200 `ui 8  ]
+{
+"32
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 32:     T10MS_CNT = 0U;
+[e = _T10MS_CNT -> -> 0 `ui `us ]
+"33
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 33:     fSignalFail = 1U;
+[e = _fSignalFail -> -> 1 `ui `uc ]
+"34
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 34:   }
+}
+[e :U 8 ]
+"35
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 35: }
+[e :UE 7 ]
+}
+"37
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 37: void CheckSignalFail(void) {
+[v _CheckSignalFail `(v ~T0 @X0 1 ef ]
+{
+[e :U _CheckSignalFail ]
+[f ]
+"38
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 38:   if (fSignalFail == 1U) {
+[e $ ! == -> _fSignalFail `ui -> 1 `ui 10  ]
+{
+"39
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 39:     fSignalFail = 0U;
+[e = _fSignalFail -> -> 0 `ui `uc ]
+"41
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 41:     led[POS].on();
+[e ( *U . *U + &U _led * -> . `E66 0 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
+"42
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 42:     led[DRL].off();
+[e ( *U . *U + &U _led * -> . `E66 1 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
+"43
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 43:     led[LO_BEAM].on();
+[e ( *U . *U + &U _led * -> . `E66 2 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
+"44
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 44:     led[HI_BEAM].off();
+[e ( *U . *U + &U _led * -> . `E66 3 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
+"45
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 45:     led[TURN_LEFT].off();
+[e ( *U . *U + &U _led * -> . `E66 4 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
+"46
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 46:     led[TURN_RIGHT].off();
+[e ( *U . *U + &U _led * -> . `E66 5 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
+"47
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 47:   }
+}
+[e :U 10 ]
+"48
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\timer.c: 48: }
+[e :UE 9 ]
+}
