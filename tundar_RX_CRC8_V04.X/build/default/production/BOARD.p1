@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F48 `(v ~T0 @X0 0 tf ]
+[v F69 `(v ~T0 @X0 0 tf ]
 "261 ./mcc_generated_files/tmr0.h
 [; ;./mcc_generated_files/tmr0.h: 261:  void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F48 ]
+[v _TMR0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F69 ]
 "29 ./timer.h
 [; ;./timer.h: 29: extern void TMR0_EvenHandler(void);
 [v _TMR0_EvenHandler `(v ~T0 @X0 0 ef ]
@@ -12,43 +12,49 @@ Version 4.0 HI-TECH Software Intermediate Code
 "15 ./Warning_ignored.h
 [; ;./Warning_ignored.h: 15: extern void Clear_No_Call_Warning(void) ;
 [v _Clear_No_Call_Warning `(v ~T0 @X0 0 ef ]
-[v F103 `(uc ~T0 @X0 0 tf ]
-[v F102 `*F103 ~T0 @X0 1 t ]
-[v F106 `(v ~T0 @X0 0 tf1`uc ]
-[v F105 `*F106 ~T0 @X0 1 t ]
+[v F102 `(uc ~T0 @X0 0 tf ]
+[v F101 `*F102 ~T0 @X0 1 t ]
+[v F105 `(v ~T0 @X0 0 tf1`uc ]
+[v F104 `*F105 ~T0 @X0 1 t ]
 "18 ./tundra_PWM_receiver.h
 [; ;./tundra_PWM_receiver.h: 18: typedef struct {
-[s S6 `C*F103 1 `C*F106 1 ]
+[s S6 `C*F102 1 `C*F105 1 ]
 [n S6 . get set ]
 "24
 [; ;./tundra_PWM_receiver.h: 24: extern Data_t const fCRC;
 [v _fCRC `CS6 ~T0 @X0 0 e ]
-[v F98 `(uc ~T0 @X0 0 tf ]
-[v F97 `*F98 ~T0 @X0 1 t ]
+[v F97 `(uc ~T0 @X0 0 tf ]
+[v F96 `*F97 ~T0 @X0 1 t ]
 "14
 [; ;./tundra_PWM_receiver.h: 14: typedef struct {
-[s S5 `C*F98 1 ]
+[s S5 `C*F97 1 ]
 [n S5 . get ]
 "25
 [; ;./tundra_PWM_receiver.h: 25: extern Get_t const Receiver[LED_COUNT];
 [v _Receiver `CS5 ~T0 @X0 -> 0 `x e ]
 "24 BOARD.c
 [; ;BOARD.c: 24:     if (Receiver[POS].get() == (1U)) {
-[c E84 0 1 2 3 4 5 6 .. ]
-[n E84 . POS DRL LO_BEAM HI_BEAM TURN_LEFT TURN_RIGHT LED_COUNT  ]
-[v F76 `(v ~T0 @X0 0 tf ]
-[v F75 `*F76 ~T0 @X0 1 t ]
-[v F79 `(v ~T0 @X0 0 tf ]
-[v F78 `*F79 ~T0 @X0 1 t ]
-[v F82 `(uc ~T0 @X0 0 tf ]
-[v F81 `*F82 ~T0 @X0 1 t ]
+[c E49 0 1 2 3 4 5 6 .. ]
+[n E49 . POS DRL LO_BEAM HI_BEAM TURN_LEFT TURN_RIGHT LED_COUNT  ]
+[v F41 `(v ~T0 @X0 0 tf ]
+[v F40 `*F41 ~T0 @X0 1 t ]
+[v F44 `(v ~T0 @X0 0 tf ]
+[v F43 `*F44 ~T0 @X0 1 t ]
+[v F47 `(uc ~T0 @X0 0 tf ]
+[v F46 `*F47 ~T0 @X0 1 t ]
 "12 ./LED.h
 [; ;./LED.h: 12: typedef struct {
-[s S4 `C*F76 1 `C*F79 1 `C*F82 1 ]
-[n S4 . on off is_on ]
+[s S1 `C*F41 1 `C*F44 1 `C*F47 1 ]
+[n S1 . on off is_on ]
 "30
 [; ;./LED.h: 30: extern const LED_t led[LED_COUNT];
-[v _led `CS4 ~T0 @X0 -> 0 `x e ]
+[v _led `CS1 ~T0 @X0 -> 0 `x e ]
+"28 ./tundra_PWM_receiver.h
+[; ;./tundra_PWM_receiver.h: 28: extern void Receiver_FrameData(void);
+[v _Receiver_FrameData `(v ~T0 @X0 0 ef ]
+"30 ./timer.h
+[; ;./timer.h: 30: extern void CheckSignalFail(void);
+[v _CheckSignalFail `(v ~T0 @X0 0 ef ]
 "12 BOARD.c
 [; ;BOARD.c: 12: void board_init(void) {
 [v _board_init `(v ~T0 @X0 1 ef ]
@@ -83,11 +89,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( *U . _fCRC 1 (1 -> -> 0 `ui `uc ]
 "24
 [; ;BOARD.c: 24:     if (Receiver[POS].get() == (1U)) {
-[e $ ! == -> ( *U . *U + &U _Receiver * -> . `E84 0 `ux -> -> # *U &U _Receiver `ui `ux 0 ..  `ui -> 1 `ui 10  ]
+[e $ ! == -> ( *U . *U + &U _Receiver * -> . `E49 0 `ux -> -> # *U &U _Receiver `ui `ux 0 ..  `ui -> 1 `ui 10  ]
 {
 "25
 [; ;BOARD.c: 25:       led[POS].on();
-[e ( *U . *U + &U _led * -> . `E84 0 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
+[e ( *U . *U + &U _led * -> . `E49 0 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
 "26
 [; ;BOARD.c: 26:     } else {
 }
@@ -96,18 +102,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "27
 [; ;BOARD.c: 27:       led[POS].off();
-[e ( *U . *U + &U _led * -> . `E84 0 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
+[e ( *U . *U + &U _led * -> . `E49 0 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
 "28
 [; ;BOARD.c: 28:     }
 }
 [e :U 11 ]
 "30
 [; ;BOARD.c: 30:     if (Receiver[DRL].get() == (1U)) {
-[e $ ! == -> ( *U . *U + &U _Receiver * -> . `E84 1 `ux -> -> # *U &U _Receiver `ui `ux 0 ..  `ui -> 1 `ui 12  ]
+[e $ ! == -> ( *U . *U + &U _Receiver * -> . `E49 1 `ux -> -> # *U &U _Receiver `ui `ux 0 ..  `ui -> 1 `ui 12  ]
 {
 "31
 [; ;BOARD.c: 31:       led[DRL].on();
-[e ( *U . *U + &U _led * -> . `E84 1 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
+[e ( *U . *U + &U _led * -> . `E49 1 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
 "32
 [; ;BOARD.c: 32:     } else {
 }
@@ -116,18 +122,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "33
 [; ;BOARD.c: 33:       led[DRL].off();
-[e ( *U . *U + &U _led * -> . `E84 1 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
+[e ( *U . *U + &U _led * -> . `E49 1 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
 "34
 [; ;BOARD.c: 34:     }
 }
 [e :U 13 ]
 "36
 [; ;BOARD.c: 36:     if (Receiver[LO_BEAM].get() == (1U)) {
-[e $ ! == -> ( *U . *U + &U _Receiver * -> . `E84 2 `ux -> -> # *U &U _Receiver `ui `ux 0 ..  `ui -> 1 `ui 14  ]
+[e $ ! == -> ( *U . *U + &U _Receiver * -> . `E49 2 `ux -> -> # *U &U _Receiver `ui `ux 0 ..  `ui -> 1 `ui 14  ]
 {
 "37
 [; ;BOARD.c: 37:       led[LO_BEAM].on();
-[e ( *U . *U + &U _led * -> . `E84 2 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
+[e ( *U . *U + &U _led * -> . `E49 2 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
 "38
 [; ;BOARD.c: 38:     } else {
 }
@@ -136,18 +142,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "39
 [; ;BOARD.c: 39:       led[LO_BEAM].off();
-[e ( *U . *U + &U _led * -> . `E84 2 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
+[e ( *U . *U + &U _led * -> . `E49 2 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
 "40
 [; ;BOARD.c: 40:     }
 }
 [e :U 15 ]
 "42
 [; ;BOARD.c: 42:     if (Receiver[HI_BEAM].get() == (1U)) {
-[e $ ! == -> ( *U . *U + &U _Receiver * -> . `E84 3 `ux -> -> # *U &U _Receiver `ui `ux 0 ..  `ui -> 1 `ui 16  ]
+[e $ ! == -> ( *U . *U + &U _Receiver * -> . `E49 3 `ux -> -> # *U &U _Receiver `ui `ux 0 ..  `ui -> 1 `ui 16  ]
 {
 "43
 [; ;BOARD.c: 43:       led[HI_BEAM].on();
-[e ( *U . *U + &U _led * -> . `E84 3 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
+[e ( *U . *U + &U _led * -> . `E49 3 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
 "44
 [; ;BOARD.c: 44:     } else {
 }
@@ -156,18 +162,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "45
 [; ;BOARD.c: 45:       led[HI_BEAM].off();
-[e ( *U . *U + &U _led * -> . `E84 3 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
+[e ( *U . *U + &U _led * -> . `E49 3 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
 "46
 [; ;BOARD.c: 46:     }
 }
 [e :U 17 ]
 "48
 [; ;BOARD.c: 48:     if (Receiver[TURN_LEFT].get() == (1U)) {
-[e $ ! == -> ( *U . *U + &U _Receiver * -> . `E84 4 `ux -> -> # *U &U _Receiver `ui `ux 0 ..  `ui -> 1 `ui 18  ]
+[e $ ! == -> ( *U . *U + &U _Receiver * -> . `E49 4 `ux -> -> # *U &U _Receiver `ui `ux 0 ..  `ui -> 1 `ui 18  ]
 {
 "49
 [; ;BOARD.c: 49:       led[TURN_LEFT].on();
-[e ( *U . *U + &U _led * -> . `E84 4 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
+[e ( *U . *U + &U _led * -> . `E49 4 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
 "50
 [; ;BOARD.c: 50:     } else {
 }
@@ -176,18 +182,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "51
 [; ;BOARD.c: 51:       led[TURN_LEFT].off();
-[e ( *U . *U + &U _led * -> . `E84 4 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
+[e ( *U . *U + &U _led * -> . `E49 4 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
 "52
 [; ;BOARD.c: 52:     }
 }
 [e :U 19 ]
 "54
 [; ;BOARD.c: 54:     if (Receiver[TURN_RIGHT].get() == (1U)) {
-[e $ ! == -> ( *U . *U + &U _Receiver * -> . `E84 5 `ux -> -> # *U &U _Receiver `ui `ux 0 ..  `ui -> 1 `ui 20  ]
+[e $ ! == -> ( *U . *U + &U _Receiver * -> . `E49 5 `ux -> -> # *U &U _Receiver `ui `ux 0 ..  `ui -> 1 `ui 20  ]
 {
 "55
 [; ;BOARD.c: 55:       led[TURN_RIGHT].on();
-[e ( *U . *U + &U _led * -> . `E84 5 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
+[e ( *U . *U + &U _led * -> . `E49 5 `ux -> -> # *U &U _led `ui `ux 0 ..  ]
 "56
 [; ;BOARD.c: 56:     } else {
 }
@@ -196,7 +202,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "57
 [; ;BOARD.c: 57:       led[TURN_RIGHT].off();
-[e ( *U . *U + &U _led * -> . `E84 5 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
+[e ( *U . *U + &U _led * -> . `E49 5 `ux -> -> # *U &U _led `ui `ux 1 ..  ]
 "58
 [; ;BOARD.c: 58:     }
 }
@@ -208,4 +214,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "60
 [; ;BOARD.c: 60: }
 [e :UE 8 ]
+}
+"62
+[; ;BOARD.c: 62: void board_updata(void) {
+[v _board_updata `(v ~T0 @X0 1 ef ]
+{
+[e :U _board_updata ]
+[f ]
+"63
+[; ;BOARD.c: 63:   Receiver_FrameData();
+[e ( _Receiver_FrameData ..  ]
+"64
+[; ;BOARD.c: 64:   dataSetLed();
+[e ( _dataSetLed ..  ]
+"65
+[; ;BOARD.c: 65:   CheckSignalFail();
+[e ( _CheckSignalFail ..  ]
+"66
+[; ;BOARD.c: 66: }
+[e :UE 22 ]
 }

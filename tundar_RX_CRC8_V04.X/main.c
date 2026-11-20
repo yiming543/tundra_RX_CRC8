@@ -42,7 +42,7 @@
 //                                +--Receiver_FrameData
 // MISRA 2012:測試全過，MCC本身有19個警告.
 
-//20261116 V04 CS:A2F6
+//20261116 V04 CS:2B96
 // 優化物件，保護變數，不被任意讀取，更改。
 // 物件使用陣列:優點:可用迴圈一次設定，缺點:沒有自動補全功能.
 // 目前為陣列版本
@@ -73,9 +73,7 @@ int main(void) {
   INTERRUPT_PeripheralInterruptEnable();
 
   while (1) {
-    Receiver_FrameData(); //接收tundra pwm 信號
-    dataSetLED(); //執行動作
-    CheckSignalFail(); // 信號失效處理 亮近燈和POS
+    board_updata();
   }
   return 0;
 }

@@ -12,8 +12,7 @@
 
 // 初始化函數
 extern void board_init(void);
-extern void CheckSignalFail(void);
-void dataSetLED(void);
+extern void board_updata(void);
 
 
 #endif // OBJECT_BOARD_H

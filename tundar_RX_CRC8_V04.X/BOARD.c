@@ -1,9 +1,9 @@
 #include "BOARD.h"
 
+#include "LED.h"
 #include "Warning_ignored.h"
 #include "mcc_generated_files/tmr0.h"
 #include "timer.h"
-#include "LED.h"
 #include "tundra_PWM_receiver.h"
 
 #define ON (1U)
@@ -57,4 +57,10 @@ void dataSetLed(void) {
       led[TURN_RIGHT].off();
     }
   }
+}
+
+void board_updata(void) {
+  Receiver_FrameData(); // 接收tundra pwm 信號
+  dataSetLed();         // 執行動作
+  CheckSignalFail();    // 信號失效處理 亮近燈和POS
 }

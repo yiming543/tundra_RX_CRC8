@@ -5172,8 +5172,7 @@ void WDT_Initialize(void);
 # 1 "./BOARD.h" 1
 # 14 "./BOARD.h"
 extern void board_init(void);
-extern void CheckSignalFail(void);
-void dataSetLED(void);
+extern void board_updata(void);
 # 53 "main.c" 2
 
 # 1 "./tundra_PWM_receiver.h" 1
@@ -5253,9 +5252,7 @@ int main(void) {
   (INTCONbits.PEIE = 1);
 
   while (1) {
-    Receiver_FrameData();
-    dataSetLED();
-    CheckSignalFail();
+    board_updata();
   }
   return 0;
 }

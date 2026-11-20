@@ -5083,6 +5083,7 @@ Get_t const Receiver[LED_COUNT] = {
     [TURN_RIGHT] = {.get = BIT_TURN_RIGHT},
 };
 
+
 static uint8_t fCRC_GET(void) {
   return fCRC_OK;
 }
@@ -5090,6 +5091,7 @@ static uint8_t fCRC_GET(void) {
 static void fCRC_SET(uint8_t data) {
   fCRC_OK = data;
 }
+
 
 Data_t const fCRC = {
     .get = fCRC_GET,

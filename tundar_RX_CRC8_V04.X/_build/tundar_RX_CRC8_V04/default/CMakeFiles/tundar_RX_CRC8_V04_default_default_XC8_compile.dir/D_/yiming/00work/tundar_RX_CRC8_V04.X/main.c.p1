@@ -21,15 +21,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "374
 [; ;C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1936.h: 374: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"28 D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../tundra_PWM_receiver.h
-[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../tundra_PWM_receiver.h: 28: extern void Receiver_FrameData(void);
-[v _Receiver_FrameData `(v ~T0 @X0 0 ef ]
-"16 D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../BOARD.h
-[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../BOARD.h: 16: void dataSetLED(void);
-[v _dataSetLED `(v ~T0 @X0 0 ef ]
-"15
-[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../BOARD.h: 15: extern void CheckSignalFail(void);
-[v _CheckSignalFail `(v ~T0 @X0 0 ef ]
+"17 D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../BOARD.h
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\cmake\tundar_RX_CRC8_V04\default\..\..\../BOARD.h: 17: extern void board_updata(void);
+[v _board_updata `(v ~T0 @X0 0 ef ]
 "54 C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1936.h
 [; ;C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1936.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -549,25 +543,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 364 ]
 {
 "76
-[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\main.c: 76:     Receiver_FrameData();
-[e ( _Receiver_FrameData ..  ]
-"77
-[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\main.c: 77:     dataSetLED();
-[e ( _dataSetLED ..  ]
-"78
-[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\main.c: 78:     CheckSignalFail();
-[e ( _CheckSignalFail ..  ]
-"79
-[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\main.c: 79:   }
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\main.c: 76:     board_updata();
+[e ( _board_updata ..  ]
+"80
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\main.c: 80:   }
 }
 [e :U 363 ]
 [e $U 364  ]
 [e :U 365 ]
-"80
-[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\main.c: 80:   return 0;
+"81
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\main.c: 81:   return 0;
 [e ) -> 0 `i ]
 [e $UE 362  ]
-"81
-[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\main.c: 81: }
+"82
+[; ;D:\yiming\00work\tundar_RX_CRC8_V04.X\main.c: 82: }
 [e :UE 362 ]
 }

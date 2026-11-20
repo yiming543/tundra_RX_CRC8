@@ -10,16 +10,13 @@
 # 1 "./BOARD.h" 1
 # 14 "./BOARD.h"
 extern void board_init(void);
-extern void CheckSignalFail(void);
-void dataSetLED(void);
+extern void board_updata(void);
 # 2 "BOARD.c" 2
 
-# 1 "./Warning_ignored.h" 1
-# 15 "./Warning_ignored.h"
-extern void Clear_No_Call_Warning(void) ;
-# 4 "BOARD.c" 2
-# 1 "./mcc_generated_files/tmr0.h" 1
-# 54 "./mcc_generated_files/tmr0.h"
+# 1 "./LED.h" 1
+
+
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 1 3
 
 
@@ -125,50 +122,14 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 149 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
-# 54 "./mcc_generated_files/tmr0.h" 2
+# 5 "./LED.h" 2
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
-# 55 "./mcc_generated_files/tmr0.h" 2
-# 104 "./mcc_generated_files/tmr0.h"
-void TMR0_Initialize(void);
-# 135 "./mcc_generated_files/tmr0.h"
-uint8_t TMR0_ReadTimer(void);
-# 174 "./mcc_generated_files/tmr0.h"
-void TMR0_WriteTimer(uint8_t timerVal);
-# 210 "./mcc_generated_files/tmr0.h"
-void TMR0_Reload(void);
-# 225 "./mcc_generated_files/tmr0.h"
-void TMR0_ISR(void);
-# 243 "./mcc_generated_files/tmr0.h"
-void TMR0_CallBack(void);
-# 261 "./mcc_generated_files/tmr0.h"
- void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
-# 279 "./mcc_generated_files/tmr0.h"
-extern void (*TMR0_InterruptHandler)(void);
-# 297 "./mcc_generated_files/tmr0.h"
-void TMR0_DefaultInterruptHandler(void);
-# 5 "BOARD.c" 2
-# 1 "./timer.h" 1
-# 15 "./timer.h"
-typedef struct {
-  void (*const set)(uint8_t);
-} U8_t;
 
-typedef struct {
-  void (*const set)(uint16_t);
-} U16_t;
 
-typedef struct{
-  U8_t fSIGNAL_FAIL;
-  U16_t t10MS_CNT;
-}TMR0_t;
 
-extern TMR0_t const tmr0;
-extern void TMR0_EvenHandler(void);
-extern void CheckSignalFail(void);
-# 6 "BOARD.c" 2
-# 1 "./LED.h" 1
-# 12 "./LED.h"
+
+
+
 typedef struct {
   void (*const on)(void);
   void (*const off)(void);
@@ -191,6 +152,52 @@ extern const LED_t led[LED_COUNT];
 
 
 void LED_Init(void);
+# 4 "BOARD.c" 2
+# 1 "./Warning_ignored.h" 1
+# 15 "./Warning_ignored.h"
+extern void Clear_No_Call_Warning(void) ;
+# 5 "BOARD.c" 2
+# 1 "./mcc_generated_files/tmr0.h" 1
+# 55 "./mcc_generated_files/tmr0.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
+# 55 "./mcc_generated_files/tmr0.h" 2
+# 104 "./mcc_generated_files/tmr0.h"
+void TMR0_Initialize(void);
+# 135 "./mcc_generated_files/tmr0.h"
+uint8_t TMR0_ReadTimer(void);
+# 174 "./mcc_generated_files/tmr0.h"
+void TMR0_WriteTimer(uint8_t timerVal);
+# 210 "./mcc_generated_files/tmr0.h"
+void TMR0_Reload(void);
+# 225 "./mcc_generated_files/tmr0.h"
+void TMR0_ISR(void);
+# 243 "./mcc_generated_files/tmr0.h"
+void TMR0_CallBack(void);
+# 261 "./mcc_generated_files/tmr0.h"
+ void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
+# 279 "./mcc_generated_files/tmr0.h"
+extern void (*TMR0_InterruptHandler)(void);
+# 297 "./mcc_generated_files/tmr0.h"
+void TMR0_DefaultInterruptHandler(void);
+# 6 "BOARD.c" 2
+# 1 "./timer.h" 1
+# 15 "./timer.h"
+typedef struct {
+  void (*const set)(uint8_t);
+} U8_t;
+
+typedef struct {
+  void (*const set)(uint16_t);
+} U16_t;
+
+typedef struct{
+  U8_t fSIGNAL_FAIL;
+  U16_t t10MS_CNT;
+}TMR0_t;
+
+extern TMR0_t const tmr0;
+extern void TMR0_EvenHandler(void);
+extern void CheckSignalFail(void);
 # 7 "BOARD.c" 2
 # 1 "./tundra_PWM_receiver.h" 1
 # 14 "./tundra_PWM_receiver.h"
@@ -262,4 +269,10 @@ void dataSetLed(void) {
       led[TURN_RIGHT].off();
     }
   }
+}
+
+void board_updata(void) {
+  Receiver_FrameData();
+  dataSetLed();
+  CheckSignalFail();
 }

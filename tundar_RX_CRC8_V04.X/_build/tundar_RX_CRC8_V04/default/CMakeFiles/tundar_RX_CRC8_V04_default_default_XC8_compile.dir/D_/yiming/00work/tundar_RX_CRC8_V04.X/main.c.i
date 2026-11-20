@@ -5172,8 +5172,9 @@ void WDT_Initialize(void);
 # 1 "D:\\yiming\\00work\\tundar_RX_CRC8_V04.X\\cmake\\tundar_RX_CRC8_V04\\default\\..\\..\\../BOARD.h" 1
 # 14 "D:\\yiming\\00work\\tundar_RX_CRC8_V04.X\\cmake\\tundar_RX_CRC8_V04\\default\\..\\..\\../BOARD.h"
 extern void board_init(void);
-extern void CheckSignalFail(void);
-void dataSetLED(void);
+
+
+extern void board_updata(void);
 # 53 "D:\\yiming\\00work\\tundar_RX_CRC8_V04.X\\main.c" 2
 
 # 1 "D:\\yiming\\00work\\tundar_RX_CRC8_V04.X\\cmake\\tundar_RX_CRC8_V04\\default\\..\\..\\../tundra_PWM_receiver.h" 1
@@ -5253,9 +5254,10 @@ int main(void) {
   (INTCONbits.PEIE = 1);
 
   while (1) {
-    Receiver_FrameData();
-    dataSetLED();
-    CheckSignalFail();
+    board_updata();
+
+
+
   }
   return 0;
 }
