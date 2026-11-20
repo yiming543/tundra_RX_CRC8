@@ -1,0 +1,746 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1936 ]
+[d frameptr 6 ]
+"122 D:\yiming\00work\tundar_RX_CRC8_V05.X\tundra_PWM_receiver.c
+[e E2804 . `uc
+UART_START 0
+UART_DATA 1
+UART_STOP 2
+]
+"202
+[e E2798 . `uc
+STEP_ID 0
+STEP_LENGHT 1
+STEP_DATA 2
+STEP_CRC 3
+]
+"12 D:\yiming\00work\tundar_RX_CRC8_V05.X\BOARD.c
+[v _board_init board_init `(v  1 e 1 0 ]
+"18
+[v _dataSetLed dataSetLed `(v  1 e 1 0 ]
+"62
+[v _CheckSignalFail CheckSignalFail `(v  1 e 1 0 ]
+"75
+[v _board_updata board_updata `(v  1 e 1 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"27 D:\yiming\00work\tundar_RX_CRC8_V05.X\LED.c
+[v _POS_ON POS_ON `(v  1 s 1 POS_ON ]
+"34
+[v _POS_OFF POS_OFF `(v  1 s 1 POS_OFF ]
+"41
+[v _LED_POS_IS_ON LED_POS_IS_ON `(uc  1 s 1 LED_POS_IS_ON ]
+"45
+[v _DRL_ON DRL_ON `(v  1 s 1 DRL_ON ]
+"52
+[v _DRL_OFF DRL_OFF `(v  1 s 1 DRL_OFF ]
+"59
+[v _LED_DRL_IS_ON LED_DRL_IS_ON `(uc  1 s 1 LED_DRL_IS_ON ]
+"63
+[v _LO_BEAM_ON LO_BEAM_ON `(v  1 s 1 LO_BEAM_ON ]
+"70
+[v _LO_BEAM_OFF LO_BEAM_OFF `(v  1 s 1 LO_BEAM_OFF ]
+"77
+[v _LED_LO_BEAM_IS_ON LED_LO_BEAM_IS_ON `(uc  1 s 1 LED_LO_BEAM_IS_ON ]
+"81
+[v _HI_BEAM_ON HI_BEAM_ON `(v  1 s 1 HI_BEAM_ON ]
+"88
+[v _HI_BEAM_OFF HI_BEAM_OFF `(v  1 s 1 HI_BEAM_OFF ]
+"95
+[v _LED_HI_BEAM_IS_ON LED_HI_BEAM_IS_ON `(uc  1 s 1 LED_HI_BEAM_IS_ON ]
+"99
+[v _TURN_LEFT_ON TURN_LEFT_ON `(v  1 s 1 TURN_LEFT_ON ]
+"106
+[v _TURN_LEFT_OFF TURN_LEFT_OFF `(v  1 s 1 TURN_LEFT_OFF ]
+"113
+[v _LED_TURN_LEFT_IS_ON LED_TURN_LEFT_IS_ON `(uc  1 s 1 LED_TURN_LEFT_IS_ON ]
+"117
+[v _TURN_RIGHT_ON TURN_RIGHT_ON `(v  1 s 1 TURN_RIGHT_ON ]
+"124
+[v _TURN_RIGHT_OFF TURN_RIGHT_OFF `(v  1 s 1 TURN_RIGHT_OFF ]
+"131
+[v _LED_TURN_RIGHT_IS_ON LED_TURN_RIGHT_IS_ON `(uc  1 s 1 LED_TURN_RIGHT_IS_ON ]
+"145
+[v _LED_Init LED_Init `(v  1 e 1 0 ]
+"64 D:\yiming\00work\tundar_RX_CRC8_V05.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"59 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/eccp3.c
+[v _ECCP3_Initialize ECCP3_Initialize `(v  1 e 1 0 ]
+"80
+[v _ECCP3_CaptureISR ECCP3_CaptureISR `(v  1 e 1 0 ]
+"52 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"50 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"61
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"75
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"55 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"99
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+"64 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"87
+[v _TMR0_ReadTimer TMR0_ReadTimer `(uc  1 e 1 0 ]
+"96
+[v _TMR0_WriteTimer TMR0_WriteTimer `(v  1 e 1 0 ]
+"102
+[v _TMR0_Reload TMR0_Reload `(v  1 e 1 0 ]
+"108
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"130
+[v _TMR0_CallBack TMR0_CallBack `(v  1 e 1 0 ]
+"140
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+"144
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"63 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"86
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+"92
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+"98
+[v _TMR1_ReadTimer TMR1_ReadTimer `(us  1 e 2 0 ]
+"113
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+"135
+[v _TMR1_Reload TMR1_Reload `(v  1 e 1 0 ]
+"140
+[v _TMR1_StartSinglePulseAcquisition TMR1_StartSinglePulseAcquisition `(v  1 e 1 0 ]
+"145
+[v _TMR1_CheckGateValueStatus TMR1_CheckGateValueStatus `(uc  1 e 1 0 ]
+"150
+[v _TMR1_HasOverflowOccured TMR1_HasOverflowOccured `(a  1 e 1 0 ]
+"15 D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c
+[v _fSIGNAL_FAIL_SET fSIGNAL_FAIL_SET `(v  1 s 1 fSIGNAL_FAIL_SET ]
+"19
+[v _fSIGNAL_FAIL_GET fSIGNAL_FAIL_GET `(uc  1 s 1 fSIGNAL_FAIL_GET ]
+"23
+[v _T10MS_CNT_SET T10MS_CNT_SET `(v  1 s 1 T10MS_CNT_SET ]
+"33
+[v _TMR0_EvenHandler TMR0_EvenHandler `(v  1 e 1 0 ]
+"36 D:\yiming\00work\tundar_RX_CRC8_V05.X\tundra_crc8.c
+[v _calculate_crc8 calculate_crc8 `(uc  1 e 1 0 ]
+"68 D:\yiming\00work\tundar_RX_CRC8_V05.X\tundra_PWM_receiver.c
+[v _BIT_POS BIT_POS `(uc  1 s 1 BIT_POS ]
+"72
+[v _BIT_DRL BIT_DRL `(uc  1 s 1 BIT_DRL ]
+"76
+[v _BIT_LO_BEAM BIT_LO_BEAM `(uc  1 s 1 BIT_LO_BEAM ]
+"80
+[v _BIT_HI_BEAM BIT_HI_BEAM `(uc  1 s 1 BIT_HI_BEAM ]
+"84
+[v _BIT_TURN_LEFT BIT_TURN_LEFT `(uc  1 s 1 BIT_TURN_LEFT ]
+"88
+[v _BIT_TURN_RIGHT BIT_TURN_RIGHT `(uc  1 s 1 BIT_TURN_RIGHT ]
+"103
+[v _fCRC_GET fCRC_GET `(uc  1 s 1 fCRC_GET ]
+"107
+[v _fCRC_SET fCRC_SET `(v  1 s 1 fCRC_SET ]
+"120
+[v _ECCP3_CallBack ECCP3_CallBack `(v  1 e 1 0 ]
+"200
+[v _Receiver_FrameData Receiver_FrameData `(v  1 e 1 0 ]
+"15 D:\yiming\00work\tundar_RX_CRC8_V05.X\Warning_ignored.c
+[v _Clear_No_Call_Warning Clear_No_Call_Warning `(v  1 e 1 0 ]
+[s S54 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1936.h
+[s S63 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S68 . 1 `S54 1 . 1 0 `S63 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES68  1 e 1 @11 ]
+[s S323 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"653
+[u S332 . 1 `S323 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES332  1 e 1 @17 ]
+[s S109 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TMR4IF 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 TMR6IF 1 0 :1:3 
+`uc 1 CCP3IF 1 0 :1:4 
+`uc 1 CCP4IF 1 0 :1:5 
+`uc 1 CCP5IF 1 0 :1:6 
+]
+"771
+[u S117 . 1 `S109 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES117  1 e 1 @19 ]
+"801
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+"828
+[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
+"848
+[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
+"868
+[v _T1CON T1CON `VEuc  1 e 1 @24 ]
+[s S345 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+"890
+[s S354 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+[u S358 . 1 `S345 1 . 1 0 `S354 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES358  1 e 1 @24 ]
+"940
+[v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
+[s S375 . 1 `uc 1 T1GSS0 1 0 :1:0 
+`uc 1 T1GSS1 1 0 :1:1 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO_nDONE 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 TMR1GE 1 0 :1:7 
+]
+"962
+[s S384 . 1 `uc 1 T1GSS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 T1GGO 1 0 :1:3 
+]
+[u S388 . 1 `S375 1 . 1 0 `S384 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES388  1 e 1 @25 ]
+"1222
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1284
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1346
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1408
+[v _TRISE TRISE `VEuc  1 e 1 @144 ]
+[s S90 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TMR4IE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 TMR6IE 1 0 :1:3 
+`uc 1 CCP3IE 1 0 :1:4 
+`uc 1 CCP4IE 1 0 :1:5 
+`uc 1 CCP5IE 1 0 :1:6 
+]
+"1564
+[u S98 . 1 `S90 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES98  1 e 1 @147 ]
+"1594
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
+[s S171 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1617
+[s S180 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S185 . 1 `S171 1 . 1 0 `S180 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES185  1 e 1 @149 ]
+"1728
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1787
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1845
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2187
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2249
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+[s S522 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2266
+[u S531 . 1 `S522 1 . 1 0 ]
+[v _LATBbits LATBbits `VES531  1 e 1 @269 ]
+"2311
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"2373
+[v _LATE LATE `VEuc  1 e 1 @272 ]
+"2666
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"3015
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"3071
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3129
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3696
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"3766
+[v _WPUE WPUE `VEuc  1 e 1 @528 ]
+"4998
+[v _CCPR3L CCPR3L `VEuc  1 e 1 @785 ]
+"5018
+[v _CCPR3H CCPR3H `VEuc  1 e 1 @786 ]
+"5038
+[v _CCP3CON CCP3CON `VEuc  1 e 1 @787 ]
+"8074
+[v _PLLR PLLR `VEb  1 e 0 @1238 ]
+[s S710 . 6 `uc 1 pos 1 0 `uc 1 drl 1 1 `uc 1 loBeam 1 2 `uc 1 hiBeam 1 3 `uc 1 turnLeft 1 4 `uc 1 turnRight 1 5 ]
+"17 D:\yiming\00work\tundar_RX_CRC8_V05.X\LED.c
+[v _led_states led_states `S710  1 s 6 led_states ]
+[s S735 . 6 `DC*.37(v 1 on 2 0 `DC*.37(v 1 off 2 2 `DC*.37(uc 1 is_on 2 4 ]
+"136
+[s S739 . 36 `S735 1 pos 6 0 `S735 1 drl 6 6 `S735 1 loBeam 6 12 `S735 1 hiBeam 6 18 `S735 1 turnLeft 6 24 `S735 1 turnRight 6 30 ]
+[v _led led `DCS739  1 e 36 0 ]
+"58 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/tmr0.c
+[v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
+"59
+[v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
+"57 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
+"11 D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c
+[v _fSignalFail fSignalFail `uc  1 s 1 fSignalFail ]
+"12
+[v _T10MS_CNT T10MS_CNT `us  1 s 2 T10MS_CNT ]
+[s S557 . 4 `DC*.37(v 1 set 2 0 `DC*.37(uc 1 get 2 2 ]
+"28
+[s S570 . 2 `DC*.37(v 1 set 2 0 ]
+[s S576 . 6 `S557 1 fSIGNAL_FAIL 4 0 `S570 1 t10MS_CNT 2 4 ]
+[v _tmr0 tmr0 `DCS576  1 e 6 0 ]
+"18 D:\yiming\00work\tundar_RX_CRC8_V05.X\tundra_crc8.c
+[v _crc8_table_fixed crc8_table_fixed `DC[256]uc  1 s 256 crc8_table_fixed ]
+"58 D:\yiming\00work\tundar_RX_CRC8_V05.X\tundra_PWM_receiver.c
+[v _fCRC_OK fCRC_OK `uc  1 s 1 fCRC_OK ]
+"59
+[v _D2 D2 `uc  1 s 1 D2 ]
+"60
+[v _D3 D3 `uc  1 s 1 D3 ]
+[s S486 . 11 `uc 1 ID 1 0 `uc 1 LENGHT 1 1 `[8]uc 1 DATA 8 2 `uc 1 CRC 1 10 ]
+"61
+[v _tundra_data tundra_data `S486  1 s 11 tundra_data ]
+[s S493 . 2 `DC*.37(uc 1 get 2 0 ]
+"93
+[s S495 . 12 `S493 1 pos 2 0 `S493 1 drl 2 2 `S493 1 loBeam 2 4 `S493 1 hiBeam 2 6 `S493 1 turnLeft 2 8 `S493 1 turnRight 2 10 ]
+[v _Receiver Receiver `DCS495  1 e 12 0 ]
+[s S510 . 4 `DC*.37(uc 1 get 2 0 `DC*.37(v 1 set 2 2 ]
+"112
+[v _fCRC fCRC `DCS510  1 e 4 0 ]
+"117
+[v _byte_ready byte_ready `uc  1 s 1 byte_ready ]
+"118
+[v _rx_data rx_data `uc  1 s 1 rx_data ]
+"64 D:\yiming\00work\tundar_RX_CRC8_V05.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"82
+} 0
+"75 D:\yiming\00work\tundar_RX_CRC8_V05.X\BOARD.c
+[v _board_updata board_updata `(v  1 e 1 0 ]
+{
+"79
+} 0
+"18
+[v _dataSetLed dataSetLed `(v  1 e 1 0 ]
+{
+"60
+} 0
+"107 D:\yiming\00work\tundar_RX_CRC8_V05.X\tundra_PWM_receiver.c
+[v _fCRC_SET fCRC_SET `(v  1 s 1 fCRC_SET ]
+{
+[v fCRC_SET@data data `uc  1 p 1 0 ]
+"109
+} 0
+"103
+[v _fCRC_GET fCRC_GET `(uc  1 s 1 fCRC_GET ]
+{
+"105
+} 0
+"84
+[v _BIT_TURN_LEFT BIT_TURN_LEFT `(uc  1 s 1 BIT_TURN_LEFT ]
+{
+"86
+} 0
+"80
+[v _BIT_HI_BEAM BIT_HI_BEAM `(uc  1 s 1 BIT_HI_BEAM ]
+{
+"82
+} 0
+"76
+[v _BIT_LO_BEAM BIT_LO_BEAM `(uc  1 s 1 BIT_LO_BEAM ]
+{
+"78
+} 0
+"72
+[v _BIT_DRL BIT_DRL `(uc  1 s 1 BIT_DRL ]
+{
+"74
+} 0
+"68
+[v _BIT_POS BIT_POS `(uc  1 s 1 BIT_POS ]
+{
+"70
+} 0
+"88
+[v _BIT_TURN_RIGHT BIT_TURN_RIGHT `(uc  1 s 1 BIT_TURN_RIGHT ]
+{
+"90
+} 0
+"200
+[v _Receiver_FrameData Receiver_FrameData `(v  1 e 1 0 ]
+{
+"201
+[v Receiver_FrameData@dataCnt dataCnt `uc  1 s 1 dataCnt ]
+"202
+[v Receiver_FrameData@step step `E2798  1 s 1 step ]
+"250
+} 0
+"36 D:\yiming\00work\tundar_RX_CRC8_V05.X\tundra_crc8.c
+[v _calculate_crc8 calculate_crc8 `(uc  1 e 1 0 ]
+{
+[v calculate_crc8@data data `*.4DCuc  1 a 1 wreg ]
+"39
+[v calculate_crc8@i i `uc  1 a 1 4 ]
+"37
+[v calculate_crc8@crc crc `uc  1 a 1 3 ]
+"36
+[v calculate_crc8@data data `*.4DCuc  1 a 1 wreg ]
+[v calculate_crc8@length length `uc  1 p 1 0 ]
+[v calculate_crc8@data data `*.4DCuc  1 a 1 2 ]
+"46
+} 0
+"23 D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c
+[v _T10MS_CNT_SET T10MS_CNT_SET `(v  1 s 1 T10MS_CNT_SET ]
+{
+[v T10MS_CNT_SET@data data `us  1 p 2 0 ]
+"25
+} 0
+"62 D:\yiming\00work\tundar_RX_CRC8_V05.X\BOARD.c
+[v _CheckSignalFail CheckSignalFail `(v  1 e 1 0 ]
+{
+"73
+} 0
+"15 D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c
+[v _fSIGNAL_FAIL_SET fSIGNAL_FAIL_SET `(v  1 s 1 fSIGNAL_FAIL_SET ]
+{
+[v fSIGNAL_FAIL_SET@data data `uc  1 p 1 0 ]
+"17
+} 0
+"19
+[v _fSIGNAL_FAIL_GET fSIGNAL_FAIL_GET `(uc  1 s 1 fSIGNAL_FAIL_GET ]
+{
+"21
+} 0
+"99 D:\yiming\00work\tundar_RX_CRC8_V05.X\LED.c
+[v _TURN_LEFT_ON TURN_LEFT_ON `(v  1 s 1 TURN_LEFT_ON ]
+{
+"104
+} 0
+"81
+[v _HI_BEAM_ON HI_BEAM_ON `(v  1 s 1 HI_BEAM_ON ]
+{
+"86
+} 0
+"63
+[v _LO_BEAM_ON LO_BEAM_ON `(v  1 s 1 LO_BEAM_ON ]
+{
+"68
+} 0
+"45
+[v _DRL_ON DRL_ON `(v  1 s 1 DRL_ON ]
+{
+"50
+} 0
+"27
+[v _POS_ON POS_ON `(v  1 s 1 POS_ON ]
+{
+"32
+} 0
+"117
+[v _TURN_RIGHT_ON TURN_RIGHT_ON `(v  1 s 1 TURN_RIGHT_ON ]
+{
+"122
+} 0
+"12 D:\yiming\00work\tundar_RX_CRC8_V05.X\BOARD.c
+[v _board_init board_init `(v  1 e 1 0 ]
+{
+"16
+} 0
+"145 D:\yiming\00work\tundar_RX_CRC8_V05.X\LED.c
+[v _LED_Init LED_Init `(v  1 e 1 0 ]
+{
+"158
+} 0
+"106
+[v _TURN_LEFT_OFF TURN_LEFT_OFF `(v  1 s 1 TURN_LEFT_OFF ]
+{
+"111
+} 0
+"88
+[v _HI_BEAM_OFF HI_BEAM_OFF `(v  1 s 1 HI_BEAM_OFF ]
+{
+"93
+} 0
+"70
+[v _LO_BEAM_OFF LO_BEAM_OFF `(v  1 s 1 LO_BEAM_OFF ]
+{
+"75
+} 0
+"52
+[v _DRL_OFF DRL_OFF `(v  1 s 1 DRL_OFF ]
+{
+"57
+} 0
+"34
+[v _POS_OFF POS_OFF `(v  1 s 1 POS_OFF ]
+{
+"39
+} 0
+"124
+[v _TURN_RIGHT_OFF TURN_RIGHT_OFF `(v  1 s 1 TURN_RIGHT_OFF ]
+{
+"129
+} 0
+"113
+[v _LED_TURN_LEFT_IS_ON LED_TURN_LEFT_IS_ON `(uc  1 s 1 LED_TURN_LEFT_IS_ON ]
+{
+"115
+} 0
+"95
+[v _LED_HI_BEAM_IS_ON LED_HI_BEAM_IS_ON `(uc  1 s 1 LED_HI_BEAM_IS_ON ]
+{
+"97
+} 0
+"77
+[v _LED_LO_BEAM_IS_ON LED_LO_BEAM_IS_ON `(uc  1 s 1 LED_LO_BEAM_IS_ON ]
+{
+"79
+} 0
+"59
+[v _LED_DRL_IS_ON LED_DRL_IS_ON `(uc  1 s 1 LED_DRL_IS_ON ]
+{
+"61
+} 0
+"41
+[v _LED_POS_IS_ON LED_POS_IS_ON `(uc  1 s 1 LED_POS_IS_ON ]
+{
+"43
+} 0
+"131
+[v _LED_TURN_RIGHT_IS_ON LED_TURN_RIGHT_IS_ON `(uc  1 s 1 LED_TURN_RIGHT_IS_ON ]
+{
+"133
+} 0
+"15 D:\yiming\00work\tundar_RX_CRC8_V05.X\Warning_ignored.c
+[v _Clear_No_Call_Warning Clear_No_Call_Warning `(v  1 e 1 0 ]
+{
+"36
+} 0
+"92 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/tmr1.c
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+{
+"96
+} 0
+"86
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+{
+"90
+} 0
+"140
+[v _TMR1_StartSinglePulseAcquisition TMR1_StartSinglePulseAcquisition `(v  1 e 1 0 ]
+{
+"143
+} 0
+"135
+[v _TMR1_Reload TMR1_Reload `(v  1 e 1 0 ]
+{
+"138
+} 0
+"113
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+{
+[v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
+"133
+} 0
+"98
+[v _TMR1_ReadTimer TMR1_ReadTimer `(us  1 e 2 0 ]
+{
+"100
+[v TMR1_ReadTimer@readVal readVal `us  1 a 2 7 ]
+"102
+[v TMR1_ReadTimer@readValLow readValLow `uc  1 a 1 10 ]
+"101
+[v TMR1_ReadTimer@readValHigh readValHigh `uc  1 a 1 9 ]
+"111
+} 0
+"150
+[v _TMR1_HasOverflowOccured TMR1_HasOverflowOccured `(a  1 e 1 0 ]
+{
+"154
+} 0
+"145
+[v _TMR1_CheckGateValueStatus TMR1_CheckGateValueStatus `(uc  1 e 1 0 ]
+{
+"148
+} 0
+"96 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/tmr0.c
+[v _TMR0_WriteTimer TMR0_WriteTimer `(v  1 e 1 0 ]
+{
+[v TMR0_WriteTimer@timerVal timerVal `uc  1 a 1 wreg ]
+[v TMR0_WriteTimer@timerVal timerVal `uc  1 a 1 wreg ]
+"99
+[v TMR0_WriteTimer@timerVal timerVal `uc  1 a 1 0 ]
+"100
+} 0
+"102
+[v _TMR0_Reload TMR0_Reload `(v  1 e 1 0 ]
+{
+"106
+} 0
+"87
+[v _TMR0_ReadTimer TMR0_ReadTimer `(uc  1 e 1 0 ]
+{
+"89
+[v TMR0_ReadTimer@readVal readVal `uc  1 a 1 0 ]
+"94
+} 0
+"99 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+{
+"101
+} 0
+"50 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"59
+} 0
+"75
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"79
+} 0
+"63 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"84
+} 0
+"64 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"85
+} 0
+"140
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"142
+} 0
+"55 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"97
+} 0
+"61 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"73
+} 0
+"59 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/eccp3.c
+[v _ECCP3_Initialize ECCP3_Initialize `(v  1 e 1 0 ]
+{
+"78
+} 0
+"52 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"74
+} 0
+"108 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+{
+"110
+[v TMR0_ISR@CountCallBack CountCallBack `VEus  1 s 2 CountCallBack ]
+"128
+} 0
+"130
+[v _TMR0_CallBack TMR0_CallBack `(v  1 e 1 0 ]
+{
+"138
+} 0
+"144
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"147
+} 0
+"33 D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c
+[v _TMR0_EvenHandler TMR0_EvenHandler `(v  1 e 1 0 ]
+{
+"39
+} 0
+"80 D:\yiming\00work\tundar_RX_CRC8_V05.X\mcc_generated_files/eccp3.c
+[v _ECCP3_CaptureISR ECCP3_CaptureISR `(v  1 e 1 0 ]
+{
+[s S296 . 2 `uc 1 ccpr3l 1 0 `uc 1 ccpr3h 1 1 ]
+"82
+[s S299 . 2 `us 1 ccpr3_16Bit 2 0 ]
+[u S301 CCPR3Reg_tag 2 `S296 1 . 2 0 `S299 1 . 2 0 ]
+[v ECCP3_CaptureISR@module module `S301  1 a 2 10 ]
+"93
+} 0
+"120 D:\yiming\00work\tundar_RX_CRC8_V05.X\tundra_PWM_receiver.c
+[v _ECCP3_CallBack ECCP3_CallBack `(v  1 e 1 0 ]
+{
+"129
+[v ECCP3_CallBack@now now `us  1 a 2 8 ]
+"128
+[v ECCP3_CallBack@width width `us  1 a 2 6 ]
+"121
+[v ECCP3_CallBack@pluse_width_LO pluse_width_LO `us  1 a 2 4 ]
+"120
+[v ECCP3_CallBack@capturedValue capturedValue `us  1 p 2 0 ]
+"122
+[v ECCP3_CallBack@uart_state uart_state `E2804  1 s 1 uart_state ]
+"123
+[v ECCP3_CallBack@bitCnt bitCnt `uc  1 s 1 bitCnt ]
+"125
+[v ECCP3_CallBack@last_capture last_capture `us  1 s 2 last_capture ]
+"126
+[v ECCP3_CallBack@flag flag `uc  1 s 1 flag ]
+"127
+[v ECCP3_CallBack@uart_data uart_data `uc  1 s 1 uart_data ]
+"198
+} 0

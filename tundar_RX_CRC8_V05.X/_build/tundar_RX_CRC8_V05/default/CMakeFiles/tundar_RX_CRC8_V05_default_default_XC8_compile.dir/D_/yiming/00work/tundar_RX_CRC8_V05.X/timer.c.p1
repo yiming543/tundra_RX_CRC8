@@ -1,0 +1,120 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F39 `(v ~T0 @X0 0 tf1`uc ]
+[v F38 `*F39 ~T0 @X0 1 t ]
+[v F43 `(uc ~T0 @X0 0 tf ]
+[v F42 `*F43 ~T0 @X0 1 t ]
+"15 D:\yiming\00work\tundar_RX_CRC8_V05.X\cmake\tundar_RX_CRC8_V05\default\..\..\../timer.h
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\cmake\tundar_RX_CRC8_V05\default\..\..\../timer.h: 15: typedef struct {
+[s S1 `C*F39 1 `C*F43 1 ]
+[n S1 . set get ]
+[v F48 `(v ~T0 @X0 0 tf1`us ]
+[v F47 `*F48 ~T0 @X0 1 t ]
+"20
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\cmake\tundar_RX_CRC8_V05\default\..\..\../timer.h: 20: typedef struct {
+[s S2 `C*F48 1 ]
+[n S2 . set ]
+"24
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\cmake\tundar_RX_CRC8_V05\default\..\..\../timer.h: 24: typedef struct{
+[s S3 `S1 1 `S2 1 ]
+[n S3 . fSIGNAL_FAIL t10MS_CNT ]
+"11 D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 11: static uint8_t fSignalFail = 0U;
+[v _fSignalFail `uc ~T0 @X0 1 s ]
+[i _fSignalFail
+-> -> 0 `ui `uc
+]
+"12
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 12: static uint16_t T10MS_CNT = 0;
+[v _T10MS_CNT `us ~T0 @X0 1 s ]
+[i _T10MS_CNT
+-> -> 0 `i `us
+]
+"15
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 15: static void fSIGNAL_FAIL_SET(uint8_t data) {
+[v _fSIGNAL_FAIL_SET `(v ~T0 @X0 1 sf1`uc ]
+{
+[e :U _fSIGNAL_FAIL_SET ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+"16
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 16:   fSignalFail = data;
+[e = _fSignalFail _data ]
+"17
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 17: }
+[e :UE 6 ]
+}
+"19
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 19: static uint8_t fSIGNAL_FAIL_GET(void) {
+[v _fSIGNAL_FAIL_GET `(uc ~T0 @X0 1 sf ]
+{
+[e :U _fSIGNAL_FAIL_GET ]
+[f ]
+"20
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 20:   return fSignalFail;
+[e ) _fSignalFail ]
+[e $UE 7  ]
+"21
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 21: }
+[e :UE 7 ]
+}
+"23
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 23: static void T10MS_CNT_SET(uint16_t data) {
+[v _T10MS_CNT_SET `(v ~T0 @X0 1 sf1`us ]
+{
+[e :U _T10MS_CNT_SET ]
+[v _data `us ~T0 @X0 1 r1 ]
+[f ]
+"24
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 24:   T10MS_CNT = data;
+[e = _T10MS_CNT _data ]
+"25
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 25: }
+[e :UE 8 ]
+}
+"28
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 28: TMR0_t const tmr0 = {
+[v _tmr0 `CS3 ~T0 @X0 1 e ]
+[i _tmr0
+:U ..
+:U ..
+:U ..
+:U ..
+&U _fSIGNAL_FAIL_SET
+&U _fSIGNAL_FAIL_GET
+..
+..
+:U ..
+:U ..
+&U _T10MS_CNT_SET
+..
+..
+..
+..
+]
+"33
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 33: void TMR0_EvenHandler(void) {
+[v _TMR0_EvenHandler `(v ~T0 @X0 1 ef ]
+{
+[e :U _TMR0_EvenHandler ]
+[f ]
+"34
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 34:   T10MS_CNT++;
+[e ++ _T10MS_CNT -> -> 1 `i `us ]
+"35
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 35:   if (T10MS_CNT >= 200U) {
+[e $ ! >= -> _T10MS_CNT `ui -> 200 `ui 10  ]
+{
+"36
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 36:     T10MS_CNT = 0U;
+[e = _T10MS_CNT -> -> 0 `ui `us ]
+"37
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 37:     fSignalFail = 1U;
+[e = _fSignalFail -> -> 1 `ui `uc ]
+"38
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 38:   }
+}
+[e :U 10 ]
+"39
+[; ;D:\yiming\00work\tundar_RX_CRC8_V05.X\timer.c: 39: }
+[e :UE 9 ]
+}
